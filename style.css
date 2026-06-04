@@ -1,0 +1,7 @@
+body{font-family:Arial,sans-serif;background:#0b0b0b;color:white;margin:0}
+nav{display:flex;justify-content:space-between;padding:20px;background:black}
+a{color:#d4af37;text-decoration:none;margin-left:15px}
+.hero{text-align:center;padding:100px 20px}
+.btn,button{background:#d4af37;color:black;padding:12px 20px;border:none;border-radius:6px}
+section{padding:60px 20px;max-width:1000px;margin:auto}
+input,textarea{width:100%;padding:10px;margin:8px 0}
