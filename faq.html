@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -23,44 +24,67 @@
     </nav>
   </header>
 
-  <main>
-    <section class="page-hero shell">
-      <p class="eyebrow">FAQ</p>
-      <h1>Questions before you apply.</h1>
-      <p class="lead">Here are the basics. If you are unsure whether coaching fits your goal, send an application and I will review it.</p>
+  <main class="page-fade">
+    <section class="page-hero shell reveal">
+      <p class="eyebrow">Questions</p>
+      <h1>Before you apply.</h1>
+      <p class="lead">The essentials about online coaching, training options, and what happens after you send your application.</p>
     </section>
 
-    <section class="section shell faq-list">
-      <article class="faq-item">
-        <h2>Do I need gym experience?</h2>
-        <p>No. Your program will match your current experience level, and we can start with the basics if you are new.</p>
-      </article>
-      <article class="faq-item">
-        <h2>Do I need a gym membership?</h2>
-        <p>No. Gym and home training options are available depending on your equipment and goals.</p>
-      </article>
-      <article class="faq-item">
-        <h2>How often do we check in?</h2>
-        <p>Weekly. Check-ins help us track progress, make adjustments, and keep you accountable.</p>
-      </article>
-      <article class="faq-item">
-        <h2>Can I lose fat and build muscle?</h2>
-        <p>Yes, especially if you are newer to structured training. The exact approach depends on your starting point.</p>
-      </article>
-      <article class="faq-item">
-        <h2>Will I get a meal plan?</h2>
-        <p>You will get nutrition guidance and targets. The goal is to build habits you can actually follow.</p>
-      </article>
-      <article class="faq-item">
-        <h2>What happens after I apply?</h2>
-        <p>I review your application and follow up with the next step if coaching is a good fit.</p>
-      </article>
+    <section class="section shell faq-wrap reveal">
+      <div class="accordion" data-accordion>
+        <article class="accordion-item active">
+          <button class="accordion-trigger" type="button" aria-expanded="true">
+            Do I need gym experience?
+            <span></span>
+          </button>
+          <div class="accordion-panel">
+            <p>No. Your program will match your current experience level, and we can start with the basics if you are new.</p>
+          </div>
+        </article>
+        <article class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false">
+            Do I need a gym membership?
+            <span></span>
+          </button>
+          <div class="accordion-panel">
+            <p>No. Gym and home options are available depending on your equipment, goal, and schedule.</p>
+          </div>
+        </article>
+        <article class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false">
+            How often do we check in?
+            <span></span>
+          </button>
+          <div class="accordion-panel">
+            <p>Weekly. Check-ins help track progress, identify issues early, and keep your plan moving.</p>
+          </div>
+        </article>
+        <article class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false">
+            Can I build muscle and lose fat?
+            <span></span>
+          </button>
+          <div class="accordion-panel">
+            <p>Often, yes. The strategy depends on your starting point, training history, nutrition, and consistency.</p>
+          </div>
+        </article>
+        <article class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false">
+            What happens after I apply?
+            <span></span>
+          </button>
+          <div class="accordion-panel">
+            <p>I review your goals and details, then follow up with the next step if coaching is a strong fit.</p>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section class="cta-section shell">
+    <section class="closing-cta shell reveal">
       <div>
-        <p class="eyebrow">Still deciding?</p>
-        <h2>Send your goals and I will take a look.</h2>
+        <p class="eyebrow">Still unsure?</p>
+        <h2>Send your goals and I will review them.</h2>
       </div>
       <a class="btn primary" href="contact.html">Apply for Coaching</a>
     </section>
@@ -69,7 +93,7 @@
   <footer class="footer">
     <div class="shell footer-inner">
       <p>Abdullah Khan Coaching</p>
-      <p>Instagram and TikTok: @abdullahklifts</p>
+      <p>@abdullahklifts</p>
     </div>
   </footer>
 </body>

@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -23,39 +24,68 @@
     </nav>
   </header>
 
-  <main>
-    <section class="page-hero shell">
-      <p class="eyebrow">Apply for coaching</p>
-      <h1>Tell me where you are starting.</h1>
-      <p class="lead">Share your goals, current routine, and what you want help with. I will review your application and follow up.</p>
+  <main class="page-fade">
+    <section class="page-hero shell reveal">
+      <p class="eyebrow">Application</p>
+      <h1>Start with the details that matter.</h1>
+      <p class="lead">This helps me understand your goals, training background, and what kind of support you need.</p>
     </section>
 
-    <section class="section shell contact-layout">
-      <form class="application-form" action="https://formsubmit.co/1khanabd17@gmail.com" method="POST">
+    <section class="section shell application-layout reveal">
+      <form class="application-form premium-form" action="https://formsubmit.co/1khanabd17@gmail.com" method="POST" data-progress-form>
         <input type="hidden" name="_subject" value="New coaching application">
         <input type="hidden" name="_captcha" value="false">
+
+        <div class="form-progress" aria-label="Application progress">
+          <span><b data-progress-text>0%</b> complete</span>
+          <div><i data-progress-bar></i></div>
+        </div>
+
+        <div class="form-grid">
+          <label>
+            Name
+            <input name="name" type="text" placeholder="Full name" required data-progress-field>
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" placeholder="you@example.com" required data-progress-field>
+          </label>
+        </div>
+
+        <div class="form-grid">
+          <label>
+            Instagram
+            <input name="instagram" type="text" placeholder="@yourhandle" data-progress-field>
+          </label>
+          <label>
+            Goal
+            <input name="goal" type="text" placeholder="Build muscle, lose fat, recomposition..." data-progress-field>
+          </label>
+        </div>
+
         <label>
-          Name
-          <input name="name" type="text" placeholder="Your full name" required>
+          Training Experience
+          <select name="experience" data-progress-field>
+            <option value="">Select one</option>
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+            <option>Returning after time off</option>
+          </select>
         </label>
+
         <label>
-          Email
-          <input name="email" type="email" placeholder="you@example.com" required>
+          Message
+          <textarea name="message" rows="6" placeholder="Tell me about your schedule, biggest struggle, injuries, and what you want help with." data-progress-field></textarea>
         </label>
-        <label>
-          Main goal
-          <input name="goal" type="text" placeholder="Build muscle, lose fat, improve consistency...">
-        </label>
-        <label>
-          Tell me about yourself
-          <textarea name="message" rows="7" placeholder="Training experience, schedule, injuries, biggest struggle, and what you want from coaching."></textarea>
-        </label>
+
         <button class="btn primary" type="submit">Submit Application</button>
       </form>
 
-      <aside class="contact-card">
-        <h2>Contact</h2>
-        <p>Prefer to reach out directly? Message me on social or send an email.</p>
+      <aside class="application-side">
+        <p class="eyebrow">Direct contact</p>
+        <h2>Prefer to message first?</h2>
+        <p>Reach out directly or send the application so I can review your goals with more context.</p>
         <div class="contact-links">
           <a href="https://www.instagram.com/abdullahklifts">Instagram: @abdullahklifts</a>
           <a href="https://www.tiktok.com/@abdullahklifts">TikTok: @abdullahklifts</a>
@@ -68,7 +98,7 @@
   <footer class="footer">
     <div class="shell footer-inner">
       <p>Abdullah Khan Coaching</p>
-      <p>Instagram and TikTok: @abdullahklifts</p>
+      <p>@abdullahklifts</p>
     </div>
   </footer>
 </body>
