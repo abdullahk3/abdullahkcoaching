@@ -1,4 +1,57 @@
 const revealItems = document.querySelectorAll(".reveal");
+const navLinks = [...document.querySelectorAll(".nav-links a")];
+
+const setActiveNav = targetHref => {
+  navLinks.forEach(link => {
+    link.classList.toggle("active", link.getAttribute("href") === targetHref);
+  });
+};
+
+const initActiveNavigation = () => {
+  const page = window.location.pathname.split("/").pop() || "index.html";
+  const pageTargetMap = {
+    "about.html": "index.html#about",
+    "coaching.html": "index.html#coaching",
+    "programs.html": "index.html#programs",
+    "faq.html": "index.html#faq",
+    "contact.html": "contact.html"
+  };
+
+  if (pageTargetMap[page]) {
+    setActiveNav(pageTargetMap[page]);
+    return;
+  }
+
+  const sectionLinks = navLinks.filter(link => link.getAttribute("href").startsWith("#"));
+  const sections = sectionLinks
+    .map(link => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
+
+  const updateActiveSection = () => {
+    let activeId = "home";
+    const headerOffset = 120;
+
+    sections.forEach(section => {
+      if (section.getBoundingClientRect().top <= headerOffset) {
+        activeId = section.id;
+      }
+    });
+
+    setActiveNav(`#${activeId}`);
+  };
+
+  sectionLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      setActiveNav(link.getAttribute("href"));
+    });
+  });
+
+  updateActiveSection();
+  window.addEventListener("scroll", updateActiveSection, { passive: true });
+  window.addEventListener("hashchange", updateActiveSection);
+};
+
+initActiveNavigation();
 
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
