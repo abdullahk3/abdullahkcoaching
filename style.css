@@ -1,7 +1,28 @@
-body{font-family:Arial,sans-serif;background:#0b0b0b;color:white;margin:0}
-nav{display:flex;justify-content:space-between;padding:20px;background:black}
-a{color:#d4af37;text-decoration:none;margin-left:15px}
-.hero{text-align:center;padding:100px 20px}
-.btn,button{background:#d4af37;color:black;padding:12px 20px;border:none;border-radius:6px}
-section{padding:60px 20px;max-width:1000px;margin:auto}
-input,textarea{width:100%;padding:10px;margin:8px 0}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;background:#070707;color:#fff}
+nav{position:sticky;top:0;background:rgba(7,7,7,.95);backdrop-filter:blur(8px);display:flex;justify-content:space-between;padding:20px 8%;border-bottom:1px solid #222;z-index:10}
+nav a{color:#d4af37;text-decoration:none;margin-left:22px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;min-height:90vh;padding:0 8%;gap:50px}
+.tag{display:inline-block;border:1px solid #d4af37;color:#d4af37;padding:10px 18px;border-radius:30px}
+h1{font-size:78px;line-height:.95;margin:20px 0}
+.gold{color:#d4af37}
+.hero p{font-size:20px;color:#cfcfcf;margin:20px 0}
+.btn{display:inline-block;background:#d4af37;color:#000;padding:16px 28px;border-radius:10px;text-decoration:none;font-weight:800}
+.heroimg{position:relative}
+.heroimg img{width:100%;border-radius:24px;border:1px solid #333}
+.cardfloat{position:absolute;background:#111;border:1px solid #333;padding:14px 18px;border-radius:14px}
+.c1{top:20px;left:-20px}.c2{bottom:30px;right:-20px}.c3{top:45%;left:-30px}
+section{padding:90px 8%}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.card{background:#111;padding:30px;border-radius:18px;border:1px solid #222;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:#d4af37}
+h2{font-size:42px;margin-bottom:25px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.placeholder{background:#111;border:1px dashed #555;padding:80px 20px;text-align:center;border-radius:18px}
+.faq{background:#111;padding:18px;border-radius:12px;margin:10px 0}
+footer{text-align:center;padding:40px;border-top:1px solid #222;color:#aaa}
+form input,form textarea{width:100%;padding:14px;margin:10px 0;background:#111;color:white;border:1px solid #333;border-radius:10px}
+button{background:#d4af37;border:none;padding:14px 24px;border-radius:10px;font-weight:800}
+@media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:40px}h1{font-size:52px}.grid3{grid-template-columns:1fr}}
