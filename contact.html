@@ -6,14 +6,14 @@
   <title>Apply | Abdullah Khan Coaching</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <header class="site-header">
     <nav class="nav shell">
-      <a class="brand" href="index.html">Abdullah Khan Coaching</a>
+      <a class="brand" href="index.html">Abdullah Khan</a>
       <div class="nav-links" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -21,50 +21,48 @@
         <a href="faq.html">FAQ</a>
         <a class="active" href="contact.html">Contact</a>
       </div>
+      <a class="nav-cta" href="contact.html">Apply</a>
     </nav>
   </header>
 
-  <main class="page-fade">
-    <section class="page-hero shell reveal">
+  <main class="page-transition">
+    <section class="page-hero compact-hero shell reveal">
       <p class="eyebrow">Application</p>
-      <h1>Start with the details that matter.</h1>
-      <p class="lead">This helps me understand your goals, training background, and what kind of support you need.</p>
+      <h1>Tell me where you are starting.</h1>
+      <p>Share your goal, background, and what you want help with. The more specific you are, the better I can review fit.</p>
     </section>
 
-    <section class="section shell application-layout reveal">
-      <form class="application-form premium-form" action="https://formsubmit.co/1khanabd17@gmail.com" method="POST" data-progress-form>
+    <section class="trust-mini shell reveal" aria-label="Application trust points">
+      <div><strong>ISSA Certified</strong><span>Professional coaching foundation</span></div>
+      <div><strong>Custom Plans</strong><span>Built around your schedule</span></div>
+      <div><strong>Weekly Reviews</strong><span>Clear feedback and adjustments</span></div>
+    </section>
+
+    <section class="section contact-section shell reveal">
+      <form class="application-form" action="https://formsubmit.co/1khanabd17@gmail.com" method="POST" data-progress-form>
         <input type="hidden" name="_subject" value="New coaching application">
         <input type="hidden" name="_captcha" value="false">
 
-        <div class="form-progress" aria-label="Application progress">
-          <span><b data-progress-text>0%</b> complete</span>
-          <div><i data-progress-bar></i></div>
+        <div class="form-top">
+          <div>
+            <p class="eyebrow">Apply now</p>
+            <h2>Coaching application</h2>
+          </div>
+          <div class="form-progress" aria-label="Application progress">
+            <span><b data-progress-text>0%</b> complete</span>
+            <div><i data-progress-bar></i></div>
+          </div>
         </div>
 
         <div class="form-grid">
-          <label>
-            Name
-            <input name="name" type="text" placeholder="Full name" required data-progress-field>
-          </label>
-          <label>
-            Email
-            <input name="email" type="email" placeholder="you@example.com" required data-progress-field>
-          </label>
+          <label>Name<input name="name" type="text" placeholder="Full name" required data-progress-field></label>
+          <label>Email<input name="email" type="email" placeholder="you@example.com" required data-progress-field></label>
         </div>
-
         <div class="form-grid">
-          <label>
-            Instagram
-            <input name="instagram" type="text" placeholder="@yourhandle" data-progress-field>
-          </label>
-          <label>
-            Goal
-            <input name="goal" type="text" placeholder="Build muscle, lose fat, recomposition..." data-progress-field>
-          </label>
+          <label>Instagram<input name="instagram" type="text" placeholder="@yourhandle" data-progress-field></label>
+          <label>Goal<input name="goal" type="text" placeholder="Build muscle, lose fat, recomposition..." data-progress-field></label>
         </div>
-
-        <label>
-          Training Experience
+        <label>Training Experience
           <select name="experience" data-progress-field>
             <option value="">Select one</option>
             <option>Beginner</option>
@@ -73,23 +71,20 @@
             <option>Returning after time off</option>
           </select>
         </label>
-
-        <label>
-          Message
+        <label>Message
           <textarea name="message" rows="6" placeholder="Tell me about your schedule, biggest struggle, injuries, and what you want help with." data-progress-field></textarea>
         </label>
-
-        <button class="btn primary" type="submit">Submit Application</button>
+        <button class="button primary" type="submit">Submit Application</button>
       </form>
 
-      <aside class="application-side">
-        <p class="eyebrow">Direct contact</p>
+      <aside class="contact-card">
+        <p class="eyebrow">Contact</p>
         <h2>Prefer to message first?</h2>
-        <p>Reach out directly or send the application so I can review your goals with more context.</p>
+        <p>Use the application for the clearest review, or reach out directly if you have a quick question before applying.</p>
         <div class="contact-links">
-          <a href="https://www.instagram.com/abdullahklifts">Instagram: @abdullahklifts</a>
-          <a href="https://www.tiktok.com/@abdullahklifts">TikTok: @abdullahklifts</a>
-          <a href="mailto:1khanabd17@gmail.com">1khanabd17@gmail.com</a>
+          <a href="https://www.instagram.com/abdullahklifts">Instagram · @abdullahklifts</a>
+          <a href="https://www.tiktok.com/@abdullahklifts">TikTok · @abdullahklifts</a>
+          <a href="mailto:1khanabd17@gmail.com">Email · 1khanabd17@gmail.com</a>
         </div>
       </aside>
     </section>
@@ -98,7 +93,7 @@
   <footer class="footer">
     <div class="shell footer-inner">
       <p>Abdullah Khan Coaching</p>
-      <p>@abdullahklifts</p>
+      <p>@abdullahklifts · 1khanabd17@gmail.com</p>
     </div>
   </footer>
 </body>
