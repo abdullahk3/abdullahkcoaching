@@ -25,7 +25,7 @@
         <a href="index.html#home">Home</a>
         <a href="index.html#about">About</a>
         <a href="index.html#coaching">Coaching</a>
-        <a href="index.html#resources">Programs</a>
+        <a href="index.html#programs">Programs</a>
         <a href="index.html#faq">FAQ</a>
         <a class="active" href="index.html#contact">Contact</a>
       </div>
@@ -68,9 +68,9 @@
           <label>Email<input name="email" type="email" placeholder="you@example.com" required data-progress-field></label>
         </div>
         <div class="form-grid">
-          <label>Instagram <span class="optional-label">(optional)</span><input name="instagram" type="text" placeholder="@yourhandle" data-progress-field></label>
+          <label>Instagram <span class="optional-label">(optional)</span><input name="instagram" type="text" placeholder="@yourhandle"></label>
           <label>Primary Goal
-            <select name="goal" data-progress-field>
+            <select name="goal" required data-progress-field>
               <option value="">Select goal</option>
               <option>Build Muscle</option>
               <option>Lose Fat</option>
@@ -81,7 +81,7 @@
           </label>
         </div>
         <label>Message
-          <textarea name="message" rows="6" placeholder="Tell me about your schedule, biggest struggle, injuries, and what you want help with." data-progress-field></textarea>
+          <textarea name="message" rows="6" placeholder="Tell me about your schedule, biggest struggle, injuries, and what you want help with." required data-progress-field></textarea>
         </label>
         <button class="button primary" type="submit">Submit Application</button>
       </form>
