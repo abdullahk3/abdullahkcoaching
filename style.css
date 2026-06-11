@@ -3,13 +3,13 @@
   --ink: #f5f5f5;
   --soft: #f5f5f5;
   --muted: #b8b8b8;
-  --panel: rgba(255, 255, 255, 0.035);
-  --panel-strong: rgba(255, 255, 255, 0.055);
+  --panel: rgba(255, 255, 255, 0.045);
+  --panel-strong: rgba(255, 255, 255, 0.07);
   --line: rgba(255, 255, 255, 0.08);
   --gold: #d4af37;
   --gold-soft: #ebd16c;
   --gold-dim: rgba(212, 175, 55, 0.12);
-  --shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
   --radius: 18px;
   --max: 1400px;
 }
@@ -664,6 +664,28 @@ p {
   min-height: 160px;
 }
 
+.client-results-panel {
+  max-width: 920px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top left, rgba(212, 175, 55, 0.12), transparent 20rem),
+    rgba(255, 255, 255, 0.045);
+  box-shadow: var(--shadow);
+  padding: clamp(28px, 4vw, 42px);
+}
+
+.client-results-panel h3 {
+  max-width: 740px;
+  font-size: clamp(1.55rem, 2.6vw, 2rem);
+}
+
+.client-results-panel p {
+  max-width: 760px;
+  color: var(--soft);
+  margin-top: 14px;
+}
+
 .client-initials {
   width: 42px;
   height: 42px;
@@ -797,12 +819,21 @@ p {
 
 .bio-photo {
   position: relative;
-  min-height: 520px;
+  min-height: 460px;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 24px;
   background: var(--panel);
   box-shadow: var(--shadow);
+}
+
+.primary-about-photo {
+  aspect-ratio: 0.72;
+  min-height: 0;
+}
+
+.primary-about-photo img {
+  object-position: center top;
 }
 
 .bio-copy {
@@ -922,6 +953,13 @@ p {
   padding-top: 34px;
 }
 
+.program-products {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
 .product-card,
 .included-card {
   padding: clamp(26px, 4vw, 42px);
@@ -929,6 +967,8 @@ p {
 
 .product-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   background:
     radial-gradient(circle at top right, rgba(212, 175, 55, 0.2), transparent 22rem),
@@ -940,6 +980,11 @@ p {
   margin-top: 14px;
 }
 
+.product-card .button {
+  width: fit-content;
+  margin-top: auto;
+}
+
 .price {
   color: var(--ink);
   font-size: clamp(3rem, 5vw, 4.4rem);
@@ -947,6 +992,17 @@ p {
   letter-spacing: -0.05em;
   line-height: 1;
   margin-block: 28px;
+}
+
+.best-for {
+  border-top: 1px solid var(--line);
+  color: var(--soft);
+  margin-block: 20px 24px !important;
+  padding-top: 16px;
+}
+
+.best-for strong {
+  color: var(--gold-soft);
 }
 
 .price span {
@@ -989,6 +1045,10 @@ p {
   margin-top: 16px;
 }
 
+.comparison-grid p {
+  margin-top: 12px;
+}
+
 .comparison-grid strong {
   display: block;
   color: var(--ink);
@@ -1010,6 +1070,21 @@ p {
   grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
   gap: 28px;
   padding: clamp(26px, 4vw, 42px);
+}
+
+.purchase-panel li {
+  position: relative;
+  padding-left: 28px;
+}
+
+.purchase-panel li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gold-soft);
+  content: counter(list-item, decimal-leading-zero);
+  font-size: 0.76rem;
+  font-weight: 700;
 }
 
 .application-form,
@@ -1245,6 +1320,7 @@ p {
   .card-grid.six,
   .card-grid.dense,
   .card-grid.four,
+  .program-products,
   .product-layout,
   .comparison-grid,
   .purchase-panel,
@@ -1301,6 +1377,7 @@ p {
   .card-grid.dense,
   .card-grid.three,
   .card-grid.four,
+  .program-products,
   .process-line,
   .process-line.five,
   .form-grid,
