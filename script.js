@@ -54,7 +54,7 @@ document.querySelectorAll("[data-progress-form]").forEach(form => {
   const text = form.querySelector("[data-progress-text]");
 
   const updateProgress = () => {
-    const filled = fields.filter(field => field.value.trim().length > 0).length;
+    const filled = fields.filter(field => String(field.value).trim().length > 0).length;
     const percent = Math.round((filled / fields.length) * 100);
     bar.style.width = `${percent}%`;
     text.textContent = `${percent}%`;
