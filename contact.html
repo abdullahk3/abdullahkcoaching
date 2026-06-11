@@ -1,1 +1,75 @@
-<!DOCTYPE html><html><head><title>Contact</title><link rel='stylesheet' href='style.css'></head><body><nav><div><b>ABDULLAH KHAN COACHING</b></div><div><a href='index.html'>Home</a><a href='about.html'>About</a><a href='coaching.html'>Coaching</a><a href='faq.html'>FAQ</a><a href='contact.html'>Contact</a></div></nav><section><h2>Apply For Coaching</h2><form action='https://formsubmit.co/1khanabd17@gmail.com' method='POST'><input name='name' placeholder='Name' required><input name='email' placeholder='Email' required><input name='goal' placeholder='Goal'><textarea name='message' placeholder='Tell me about yourself'></textarea><button type='submit'>Submit Application</button></form><p>Instagram: @abdullahklifts<br>TikTok: @abdullahklifts<br>Email: 1khanabd17@gmail.com</p></section></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply | Abdullah Khan Coaching</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav shell">
+      <a class="brand" href="index.html">Abdullah Khan Coaching</a>
+      <div class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="coaching.html">Coaching</a>
+        <a href="faq.html">FAQ</a>
+        <a class="active" href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero shell">
+      <p class="eyebrow">Apply for coaching</p>
+      <h1>Tell me where you are starting.</h1>
+      <p class="lead">Share your goals, current routine, and what you want help with. I will review your application and follow up.</p>
+    </section>
+
+    <section class="section shell contact-layout">
+      <form class="application-form" action="https://formsubmit.co/1khanabd17@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New coaching application">
+        <input type="hidden" name="_captcha" value="false">
+        <label>
+          Name
+          <input name="name" type="text" placeholder="Your full name" required>
+        </label>
+        <label>
+          Email
+          <input name="email" type="email" placeholder="you@example.com" required>
+        </label>
+        <label>
+          Main goal
+          <input name="goal" type="text" placeholder="Build muscle, lose fat, improve consistency...">
+        </label>
+        <label>
+          Tell me about yourself
+          <textarea name="message" rows="7" placeholder="Training experience, schedule, injuries, biggest struggle, and what you want from coaching."></textarea>
+        </label>
+        <button class="btn primary" type="submit">Submit Application</button>
+      </form>
+
+      <aside class="contact-card">
+        <h2>Contact</h2>
+        <p>Prefer to reach out directly? Message me on social or send an email.</p>
+        <div class="contact-links">
+          <a href="https://www.instagram.com/abdullahklifts">Instagram: @abdullahklifts</a>
+          <a href="https://www.tiktok.com/@abdullahklifts">TikTok: @abdullahklifts</a>
+          <a href="mailto:1khanabd17@gmail.com">1khanabd17@gmail.com</a>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <p>Abdullah Khan Coaching</p>
+      <p>Instagram and TikTok: @abdullahklifts</p>
+    </div>
+  </footer>
+</body>
+</html>
