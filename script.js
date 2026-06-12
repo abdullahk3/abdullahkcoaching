@@ -116,5 +116,52 @@ document.querySelectorAll("[data-progress-form]").forEach(form => {
 
   fields.forEach(field => field.addEventListener("input", updateProgress));
   fields.forEach(field => field.addEventListener("change", updateProgress));
+  form.addEventListener("reset", () => window.setTimeout(updateProgress, 0));
   updateProgress();
+});
+
+document.querySelectorAll("[data-ajax-form]").forEach(form => {
+  const status = form.querySelector("[data-form-status]");
+  const submitButton = form.querySelector("button[type='submit']");
+  const defaultButtonText = submitButton.textContent;
+
+  const setStatus = (type, message) => {
+    status.hidden = false;
+    status.className = `form-message ${type}`;
+    status.textContent = message;
+  };
+
+  form.addEventListener("submit", async event => {
+    event.preventDefault();
+
+    if (!form.reportValidity()) {
+      return;
+    }
+
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+    setStatus("loading", "Sending your application...");
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        headers: {
+          Accept: "application/json"
+        },
+        body: new FormData(form)
+      });
+
+      if (!response.ok) {
+        throw new Error("Submission failed");
+      }
+
+      setStatus("success", "Application submitted. Thanks for applying. Your message was received and will be reviewed soon.");
+      form.reset();
+      submitButton.textContent = "Application Sent";
+    } catch (error) {
+      setStatus("error", "Something went wrong. Please try again or message Abdullah directly on Instagram.");
+      submitButton.disabled = false;
+      submitButton.textContent = defaultButtonText;
+    }
+  });
 });

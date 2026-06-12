@@ -1217,6 +1217,34 @@ p {
   gap: 14px;
 }
 
+.form-message {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  color: var(--soft);
+  font-size: 0.96rem;
+  font-weight: 700;
+  line-height: 1.45;
+  padding: 14px 16px;
+}
+
+.form-message.success {
+  border-color: rgba(70, 211, 120, 0.28);
+  background: rgba(70, 211, 120, 0.1);
+  color: #9ff0bd;
+}
+
+.form-message.loading {
+  border-color: rgba(20, 184, 166, 0.28);
+  background: rgba(20, 184, 166, 0.09);
+  color: var(--accent-soft);
+}
+
+.form-message.error {
+  border-color: rgba(255, 112, 112, 0.28);
+  background: rgba(255, 112, 112, 0.1);
+  color: #ffb0b0;
+}
+
 .application-form label {
   display: grid;
   gap: 7px;
@@ -1254,6 +1282,12 @@ p {
 
 .application-form button {
   justify-self: start;
+}
+
+.application-form button:disabled {
+  cursor: default;
+  opacity: 0.72;
+  transform: none;
 }
 
 .contact-card {
