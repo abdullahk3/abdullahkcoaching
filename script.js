@@ -14,7 +14,8 @@ const initActiveNavigation = () => {
     "coaching.html": "index.html#coaching",
     "programs.html": "index.html#programs",
     "faq.html": "index.html#faq",
-    "contact.html": "contact.html"
+    "contact.html": "contact.html",
+    "thank-you.html": "contact.html"
   };
 
   if (pageTargetMap[page]) {

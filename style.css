@@ -1293,6 +1293,93 @@ p {
   background: rgba(20, 184, 166, 0.055);
 }
 
+.success-hero {
+  min-height: calc(100vh - 68px);
+  display: grid;
+  grid-template-columns: minmax(0, 0.94fr) minmax(320px, 0.62fr);
+  align-items: center;
+  gap: 18px;
+  padding-block: clamp(52px, 7vw, 80px);
+}
+
+.success-panel,
+.next-steps article {
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top left, rgba(20, 184, 166, 0.14), transparent 20rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025)),
+    var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.success-panel {
+  padding: clamp(30px, 5vw, 58px);
+}
+
+.success-icon {
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(20, 184, 166, 0.3);
+  border-radius: 50%;
+  background: rgba(20, 184, 166, 0.12);
+  color: var(--accent-soft);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.success-panel h1 {
+  max-width: 760px;
+  font-size: clamp(2.8rem, 5.2vw, 5rem);
+}
+
+.success-panel p:not(.eyebrow) {
+  max-width: 650px;
+  color: var(--soft);
+  font-size: clamp(1rem, 1.25vw, 1.14rem);
+  line-height: 1.7;
+  margin-top: 18px;
+}
+
+.success-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.next-steps {
+  display: grid;
+  gap: 12px;
+}
+
+.next-steps article {
+  padding: 22px;
+}
+
+.next-steps span {
+  color: var(--accent-soft);
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.next-steps h3 {
+  margin-top: 18px;
+}
+
+.next-steps p {
+  font-size: 0.96rem;
+  line-height: 1.62;
+  margin-top: 10px;
+}
+
 .text-link {
   display: inline-flex;
   align-items: center;
@@ -1384,11 +1471,16 @@ p {
   .visual-panel,
   .bio-split,
   .contact-section,
-  .split-header {
+  .split-header,
+  .success-hero {
     grid-template-columns: 1fr;
   }
 
   .hero {
+    min-height: auto;
+  }
+
+  .success-hero {
     min-height: auto;
   }
 
